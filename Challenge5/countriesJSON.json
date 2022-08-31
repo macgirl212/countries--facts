@@ -1,0 +1,26 @@
+[
+    {
+        "name": "The Bahamas",
+        "capital": "Nassau",
+        "officialLanguages": ["English"],
+        "landArea": "5,358",
+        "waterPercentage": 28,
+        "population": "2,726,667",
+        "currency": ["Bahamian dollar (BSD)", "United States dollar (USD)"],
+        "drivingSide": "Left",
+        "callingCode": ["242"],
+        "unCode": "044"
+    },
+    {
+        "name": "Jamaica",
+        "capital": "Kingston",
+        "officialLanguages": ["Jamaican English", "Jamaican Patois"],
+        "landArea": "4,244",
+        "waterPercentage": 1.5,
+        "population": "400,516",
+        "currency": ["Jamaican dollar (JMD)"],
+        "drivingSide": "Left",
+        "callingCode": ["876", "658"],
+        "unCode": "388"
+    },
+]
