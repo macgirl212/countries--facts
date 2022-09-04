@@ -9,8 +9,10 @@ import Foundation
 
 struct Country: Codable {
     let name: String
+    let motto: String
     let capital: String
     let officialLanguages: Array<String>
+    let demonyn: Array<String>
     let landArea: String
     let waterPercentage: Double
     let population: String
@@ -18,4 +20,7 @@ struct Country: Codable {
     let drivingSide: String
     let callingCode: Array<String>
     let unCode: String
+    let nationalFood: String
+    let nationalFoodURL: String
+    let wikiPath: String
 }

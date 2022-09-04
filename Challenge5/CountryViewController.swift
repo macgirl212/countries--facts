@@ -29,13 +29,20 @@ class CountryViewController: UIViewController {
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <style>
-                    h1 {
+                    h1, h2, p {
                         text-align: center;
                     }
                     img {
                         display: block;
                         margin: 20px auto;
-                        border: 1px solid grey
+                        border: 1px solid grey;
+                        max-width: 100%;
+                    }
+                    table {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 40px;
                     }
                     table, th, td {
                         border: 1px solid black;
@@ -47,11 +54,27 @@ class CountryViewController: UIViewController {
                     th {
                         text-align: right;
                     }
+                    figure {
+                        padding: 1px 10px 15px 10px;
+                        border: 1px solid lightgrey;
+                        background-color: aliceblue;
+                        margin-bottom: 40px;
+                    }
+                    figcaption {
+                        font-size: 1.4em;
+                        font-style: bold;
+                        text-align: center;
+                    }
+                    #motto {
+                        font-size: 1.4em;
+                        font-style: italic;
+                    }
                 </style>
             </head>
             <body>
                 <h1>\(detailItem.name)</h1>
-                <img src="https://countryflagsapi.com/png/\(detailItem.unCode)" />
+                <img src="https://countryflagsapi.com/png/\(detailItem.unCode)" alt="\(detailItem.demonyn[0]) flag" />
+                <p id="motto">\(detailItem.motto)</p>
                 <table>
                     <tr>
                         <th>Capital:</th>
@@ -60,6 +83,10 @@ class CountryViewController: UIViewController {
                     <tr>
                         <th>Official Languages:</th>
                         <td>\(detailItem.officialLanguages.joined(separator: ", "))</td>
+                    </tr>
+                    <tr>
+                        <th>Demonyn:</th>
+                        <td>\(detailItem.demonyn.joined(separator: ", "))</td>
                     </tr>
                     <tr>
                         <th>Land Area:</th>
@@ -86,6 +113,13 @@ class CountryViewController: UIViewController {
                         <td>\(detailItem.callingCode.joined(separator: ", "))</td>
                     </tr>
                 </table>
+                <hr />
+                <h2>National Food of \(detailItem.name)</h2>
+                <figure>
+                    <img src="\(detailItem.nationalFoodURL)" alt="image of \(detailItem.nationalFood)" />
+                    <figcaption>\(detailItem.nationalFood)</figcaption>
+                </figure>
+                <p>For more information, please visit its <a href="https://en.wikipedia.org/wiki/\(detailItem.wikiPath)">Wiki page</a>.</p>
             </body>
         </html>
         """
